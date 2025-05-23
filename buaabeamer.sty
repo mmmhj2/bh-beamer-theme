@@ -37,7 +37,12 @@
 
 \useinnertheme{circles}
 
-\xdefinecolor{buaa}{rgb}{0.0078,0.3216,0.6078}
+% Palette
+\xdefinecolor{buaa}{HTML}{00529e}
+\xdefinecolor{buaa2}{HTML}{82aaff}
+\xdefinecolor{buaa3}{HTML}{d6a419}
+\xdefinecolor{buaa4}{HTML}{634100}
+
 \setbeamercolor{footline}{bg=buaa}
 \setbeamercolor{frametitle}{bg=buaa,fg=white}
 \setbeamercolor{title}{bg=buaa}
@@ -54,8 +59,6 @@
 \setbeamercolor{titlelike}{parent=palette primary}
 
 %% try
-\setbeamercolor{block title}{bg=buaa,fg=white}
-\setbeamercolor*{block title example}{use={normal text,example text},bg=white,fg=buaa}
 \setbeamercolor{fine separation line}{}
 \setbeamercolor{item projected}{fg=white}
 \setbeamercolor{palette sidebar primary}{use=normal text,fg=normal text.fg}
@@ -82,9 +85,17 @@
 	\end{frame}
 }
 
+% Blocks
+\setbeamercolor{block title}{bg=buaa,fg=white}
+\setbeamercolor*{block title example}{use={normal text,example text},bg=white,fg=buaa}
+\setbeamercolor{block title alerted}{bg=buaa3, fg=white}
+
+\setbeamercolor{block body}{bg=buaa!10}
+\setbeamercolor{block body alerted}{bg=buaa3!10}
+
 \tikzfading[name=fade top,
-            bottom color=transparent!20,
-            top color=transparent!80]
+            bottom color=transparent!50,
+            top color=transparent!50]
 \logo{
   \begin{tikzpicture}
     \node [scope fading=fade top,inner sep=0pt,outer sep=0pt,anchor=north east] {\includegraphics[width=1.5cm]{buaalogo.pdf}};
@@ -92,10 +103,12 @@
 }
 
 \renewcommand{\familydefault}{\rmdefault}
+\renewcommand{\mathfamilydefault}{\rmdefault}
 \setbeamerfont{tiny structure}{family=\rmfamily}
 \setbeamerfont{structure}{family=\rmfamily}
 \setbeamerfont{title}{family=\kaishu}
 \setbeamerfont{frametitle}{family=\kaishu}
+\setbeamerfont{block title}{family=\heiti}
 
 \mode
 <all>
